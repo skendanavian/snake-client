@@ -8,7 +8,6 @@ const connect = function() {
   const conn = net.createConnection({
     host: IP,
     port: PORT
-
   });
 
   conn.setEncoding('utf8');
@@ -17,11 +16,9 @@ const connect = function() {
     process.stdout.write(`Successfully connected to game server \n`);
   })
   conn.write("Name: SKN");
-  // conn.write("Move: up") - moves the snake. 
   return conn;
 }
 
-// console.log('Connecting ...')
-// connect();
+
 
 module.exports = {connect};
