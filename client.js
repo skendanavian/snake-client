@@ -1,3 +1,4 @@
+const {IP, PORT} = require('./constants');
 const net = require('net');
 const {stdout} = require('process');
 
@@ -5,8 +6,8 @@ const {stdout} = require('process');
 
 const connect = function() {
   const conn = net.createConnection({
-    host: "135.23.222.131",
-    port: 50542
+    host: IP,
+    port: PORT
 
   });
 
