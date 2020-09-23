@@ -1,4 +1,3 @@
-// const {stdout} = require("process");
 // Stores the active TCP connection object.
 let connection;
 
@@ -12,7 +11,6 @@ const setupInput = function(conn) {
   stdin.setRawMode(true);
   stdin.setEncoding('utf8');
   stdin.resume();
-
   stdin.on('data', (key) => handleUserInput(key));
   return stdin;
 };
@@ -22,10 +20,25 @@ const handleUserInput = function(key) {
     process.exit();
   }
   if (key === "w") {
-
     connection.write('Move: up');
-    console.log('moved up succesfully');
-
+  }
+  if (key === "d") {
+    connection.write('Move: right');
+  }
+  if (key === "s") {
+    connection.write('Move: down');
+  }
+  if (key === "a") {
+    connection.write('Move: left');
+  }
+  if (key === "z") {
+    connection.write('Say: SsSsSsSsSsS');
+  }
+  if (key === "x") {
+    connection.write('Say: Look out!');
+  }
+  if (key === "c") {
+    connection.write('Say: Whatcha Doin?');
   }
 };
 

@@ -5,10 +5,9 @@ const {stdout} = require('process');
 
 const connect = function() {
   const conn = net.createConnection({
-    host: 'localhost',
-    // host: "135.23.222.131",
-    // port: 50542
-    port: 50541
+    host: "135.23.222.131",
+    port: 50542
+
   });
 
   conn.setEncoding('utf8');
