@@ -15,10 +15,7 @@ const connect = function() {
     process.stdout.write(`Successfully connected to game server \n`);
   })
   conn.write("Name: SKN");
-  // conn.write("Move: up")
-
-
-
+  // conn.write("Move: up") - moves the snake. 
   return conn;
 }
 
